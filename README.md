@@ -1,1 +1,4 @@
 # vimrc
+
+:so %
+:PlugInstall
