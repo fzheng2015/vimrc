@@ -46,7 +46,6 @@ fun! TrimWhitespace()
 	keeppatterns %s/\s\+$//e
 	call winrestview(l:save)
 endfun
-
 augroup THE_PRIMEAGEN
 	autocmd!
 	autocmd BufWritePre * :call TrimWhitespace()
@@ -59,6 +58,7 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>v :wincmd v<CR>
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>r :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>+ :vertical resize +5<CR>
 nnoremap <leader>-:vertical resize -5<CR>
+nnoremap <leader>t :tabnew<bar> :Ex<CR>
