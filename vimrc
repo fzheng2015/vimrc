@@ -28,13 +28,22 @@ Plug 'leafgarland/typescript-vim'
 Plug 'lyuts/vim-rtags'
 Plug 'vim-utils/vim-man'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-scripts/AutoComplPop'
 Plug 'mbbill/undotree'
 call plug#end()
 colorscheme gruvbox
 set background=dark
 
-let g:coc_disable_startup_warning = 1
+" for auto completion
+set shortmess+=c
+set complete+=kspell
+inoremap <expr> <Down> pumvisible() ? "<C-n>" :"<Down>"
+inoremap <expr> <Up> pumvisible() ? "<C-p>" :"<Up>"
+inoremap <expr> <Right> pumvisible() ? "<C-y>" :"<Right>"
+inoremap <expr> <CR> pumvisible() ? "<C-y>" :"<CR>"
+inoremap <expr> <Left> pumvisible() ? "<C-e>" :"<Left>"
+
+
 let mapleader = " "
 let g:netrw_banner = 0
 let g:netrw_browse_split = 2
@@ -62,3 +71,4 @@ nnoremap <leader>r :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>+ :vertical resize +5<CR>
 nnoremap <leader>-:vertical resize -5<CR>
 nnoremap <leader>t :tabnew<bar> :Ex<CR>
+:imap jj <Esc>
