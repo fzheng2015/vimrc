@@ -7,3 +7,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 //to install plug
 then put the part starting from "call plug#begin" in .vimrc
 :PlugInstall
+
+--------------------------------------------------
+sudo apt-get install ctags // ctags installation
